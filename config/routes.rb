@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   scope '/api' do
     scope '/v1' do
-      scope '/users' do
-        get '/' => 'api#users'
+      scope '/trello' do
+        post '/' => 'api#trello_login'
       end
     end
   end
