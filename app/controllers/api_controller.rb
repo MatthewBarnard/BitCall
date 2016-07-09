@@ -31,6 +31,7 @@ class ApiController < ApplicationController
   def authenticate
     authentication_user = User.find_by call_id: params[:api_key]
     if authentication_user.blank?
+      set_access_control_headers
       render plain: 'Not Authenticated', status: 401 and return
     else
       authentication_user
