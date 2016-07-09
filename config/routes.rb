@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   scope '/api' do
     scope '/v1' do
+      get '/connect' => 'api#connect'
       scope '/trello' do
-        post '/' => 'api#trello_login'
+        post '/authenticate' => 'api#trello_login'
       end
     end
   end
