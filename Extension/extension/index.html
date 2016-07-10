@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!----------------------------->
+    <!--RESOURCES-->
+    <!----------------------------->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet"
+          type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link href='assets/css/style.css' rel='stylesheet' type='text/css'>
+    <script src="assets/js/jquery.min.js"></script>
+
+    <!----------------------------->
+    <!--JAVASCRIPT LIBRARY-->
+    <!----------------------------->
+    <script src="assets/js/api.js"></script>
+    <script src="assets/js/storage.js"></script>
+    <script src="assets/js/notification.js"></script>
+    <script src="assets/js/redirect.js"></script>
+    <script src="assets/js/script.js"></script>
+
+</head>
+<body>
+<div class="internal_content">
+    <br/>
+    <!----------------------------->
+    <!--TRELLO LOGIN-->
+    <!----------------------------->
+    <div id="trello_login" class="login page">
+        <div>
+            <img src="https://cdn3.iconfinder.com/data/icons/interface-8/128/InterfaceExpendet-09-128.png"/>
+        </div>
+        <br/>
+        <input id="txt_trello_token" type="text" placeholder="Enter Trello Token..."/>
+        <button id="btn_trello_login" class="btn btn-primary"><i class="fa fa-trello"></i>Get trello token</button>
+    </div>
+
+    <!----------------------------->
+    <!--TRELLO LOGIN-->
+    <!----------------------------->
+    <div id="trello_boards" class="login page">
+        <div>
+            <img src="https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Trello-128.png"/>
+        </div>
+        <br/>
+        <div id="trello_boards_container"></div>
+    </div>
+</div>
+
+<!----------------------------->
+<!--FOOTER-->
+<!----------------------------->
+<footer>
+    <img src="assets/images/logo.png"/>
+</footer>
+
+<!----------------------------->
+<!--LOADER-->
+<!----------------------------->
+<div id="loader">
+    <img src="assets/images/loader.gif"/>
+</div>
+
+<!----------------------------->
+<!--NOTIFICATIONS-->
+<!----------------------------->
+<div id="notification_panel">
+    <div id="failed_api_key_validation" class="notification_container">
+        <label class="notification_icon">
+            <img src="assets/images/failed.png" />
+        </label>
+        <label class="notification">
+             API key authentication failed.
+        </label>
+    </div>
+    <div id="successful_api_key_validation" class="notification_container">
+        <label class="notification_icon">
+            <img src="assets/images/success.png" />
+        </label>
+        <label class="notification">
+            API key authentication successful.
+        </label>
+    </div>
+    <div id="new_api_key_validation" class="notification_container">
+        <label class="notification_icon">
+            <img src="assets/images/added.png" />
+        </label>
+        <label class="notification">
+            API key authentication created.
+        </label>
+    </div>
+</div>
+
+</body>
+</html>
